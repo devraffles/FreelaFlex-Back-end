@@ -998,5 +998,5 @@ Exemplo:
 ## Feito por:
 
 * <a href="https://github.com/devraffles"> Rafael dos Santos Giorgi </a> - Dev Fullstack
-* <a href="https://github.com/Kaua-programin"> Kauã Hipólito Rodrigues </a> - Dev Fullstack
+* <a href="https://github.com/Kaua-programin"> Kauã Hipólito Rodrigues </a> - Dev Front-End
 * <a href="https://github.com/LucaLevanteze"> Luca Silva Levanteze </a> - UI/UX Designer & Dev Front-End
