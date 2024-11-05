@@ -9,7 +9,7 @@ A FreelaFlex oferece uma experiência personalizada e eficiente para todos os en
   <img alt="Logo FreelaFlex" src="https://github.com/devraffles/FreelaFlex/blob/main/README-IMG/FREELAFLEX%20DARK%20MODE.svg" heght="50px"/>
 </div>
 
-# Freelaflex API
+#
 
 API hospedada em: Ainda não possui hospedagem
 
