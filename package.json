@@ -1,0 +1,18 @@
+{
+  "name": "freelaflexbackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/devraffles/FreelaFlex-Back-end.git",
+  "author": "devraffles <devraffles@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=src/.env src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
+    "postgres": "^3.4.5"
+  }
+}
