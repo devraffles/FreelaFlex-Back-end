@@ -8,5 +8,9 @@ export default async function listCargoServices(nome) {
         ORDER BY cargo_nome
     `
 
+    if(cargo.length === 0){
+        return res.status(404)
+    }
+
     return cargo;
 }

@@ -63,7 +63,7 @@ yarn dev
 #
 * [Deletar Projeto](#deletar-um-projeto)
 #
-* [Deletar Cargos do Projeto](#editar-um-cargo-do-projeto)
+* [Deletar Cargos do Projeto](#deletar-um-cargo-do-projeto)
 
 ##### Proposta
 #
@@ -87,7 +87,7 @@ yarn dev
 #
 * [Registrar uma Cargo](#registrar-um-cargo)
 #
-* [Editar Cargo](#editar-um-cargo-do-projeto) 
+* [Editar Cargo](#editar-um-cargo) 
 #
 * [Deletar Cargo](#deletar-um-cargo)
 
@@ -174,7 +174,7 @@ Response:
 
 ```javascript
 {
-    "projeto": []object || null
+  "projeto": []object || null
 }
 ```
 
@@ -185,13 +185,13 @@ Exemplo:
   {
     "codprojeto": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
     "nome": "Vortex",
-    "descrição": "Vortex é uma plataforma de análise de dados em tempo real que captura, processa e visualiza fluxos de dados massivos, permitindo a tomada de decisões mais rápidas e inteligentes.",
+    "descricao": "Vortex é uma plataforma de análise de dados em tempo real que captura, processa e visualiza fluxos de dados massivos, permitindo a tomada de decisões mais rápidas e inteligentes.",
     "habilidades": "Python, Java, C++, TensorFlow, PyTorch, React, Arquitetura de software, Desenvolvimento de APIs",
   },
   {
     "codprojeto": "gr8er59c-a9s1-dujv-u89h-8hasc87h23rg",
     "nome": "Ethereal Core",
-    "descrição": "Um ambiente virtual imersivo e altamente realista, onde os usuários podem explorar mundos digitais complexos e interagir com objetos e outros usuários de forma intuitiva.",
+    "descricao": "Um ambiente virtual imersivo e altamente realista, onde os usuários podem explorar mundos digitais complexos e interagir com objetos e outros usuários de forma intuitiva.",
     "habilidades": "C, C++, Rust, Arquitetura de sistemas, gerenciamento de memória, drivers de dispositivo,",
   },
 ]
@@ -213,7 +213,7 @@ Response:
 
 ```javascript
 {
-    "projeto": []object || null
+  "projeto": []object || null
 }
 ```
 
@@ -250,7 +250,7 @@ Response:
 
 ```javascript
 {
-    "projeto": []object || null
+  "projeto": []object || null
 }
 ```
 
@@ -261,7 +261,7 @@ Exemplo:
   {
     "codprojeto": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
     "nome": "Vortex",
-    "descrição": "Vortex é uma plataforma de análise de dados em tempo real que captura, processa e visualiza fluxos de dados massivos, permitindo a tomada de decisões mais rápidas e inteligentes.",
+    "descricao": "Vortex é uma plataforma de análise de dados em tempo real que captura, processa e visualiza fluxos de dados massivos, permitindo a tomada de decisões mais rápidas e inteligentes.",
     "habilidades": "Python, Java, C++, TensorFlow, PyTorch, React, Arquitetura de software, Desenvolvimento de APIs",
   }
 ]
@@ -289,9 +289,9 @@ Response:
 
 ```javascript
 {
-    "codprojeto": string || null,
-    "status": true || false,
-    "message": string
+  "codprojeto": string || null,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -325,7 +325,6 @@ Request body:
 
 ```javascript
 {
-  "codprojetocargo": string,
   "codcargo": string,
   "codprojeto": string,
 }
@@ -335,9 +334,9 @@ Response:
 
 ```javascript
 {
-    "codprojeto": string || null,
-    "status": true || false,
-    "message": string
+  "codprojetocargo": string || null,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -385,9 +384,9 @@ Response:
 
 ```javascript
 {
-    "codprojeto": string || error,
-    "status": true || false,
-    "message": string
+  "codprojeto": string || error,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -414,12 +413,12 @@ Exemplo:
 #### Editar um cargo do projeto
 
 ```http
-PUT /projeto/cargo/edit?codProjetoCargo=${codprojetocargo}
+PUT /projeto/cargo/edit?codProjetoCargo=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `codprojetocargo` | `string` | **Required**. Código do cargo do projeto a ser editado |
+| `codprojeto` | `string` | **Required**. Código do cargo do projeto a ser editado |
 
 Request body:
 
@@ -434,9 +433,9 @@ Response:
 
 ```javascript
 {
-    "codprojetocargo": string || error,
-    "status": true || false,
-    "message": string
+  "codprojetocargo": string || error,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -473,9 +472,9 @@ Response:
 
 ```javascript
 {
-    "codprojeto": string || error,
-    "status": true || false,
-    "message": string
+  "codprojeto": string || error,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -491,7 +490,7 @@ Exemplo:
 
 #
 
-#### Deletar um projeto
+#### Deletar um cargo do projeto
 
 ```http
 DELETE /projeto/cargo/delete?codProjeto=${codprojeto}
@@ -505,9 +504,9 @@ Response:
 
 ```javascript
 {
-    "codprojetocargo": string || error,
-    "status": true || false,
-    "message": string
+  "codprojetocargo": string || error,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -517,7 +516,7 @@ Exemplo:
 {
   "codprojetocargo": "kllz02ls-9hjw-aib3-phgq-l9gk3fmaç20c",
   "status": true,
-  "message": "Registro Atualizado"
+  "message": "Registro Excluído"
 }
 ```
 
@@ -535,7 +534,7 @@ Response:
 
 ```javascript
 {
-    "proposta": []object || null
+  "proposta": []object || null
 }
 ```
 
@@ -546,7 +545,7 @@ Exemplo:
   {
     "codproposta": "jsd894jf-d74h-bmt4-sh73-tyu9xc82nae6",
     "oferta": 1700,
-    "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Análise e Definição de Requisitos, Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
+    "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Análise e Definição de Requisitos, Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
     "duracao_estimada": 12,
     "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000", 
     "codprojeto": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4", 
@@ -557,7 +556,7 @@ Exemplo:
   {
     "codproposta": "e6dxgq73-vba8-rebn-ans8-anxy8sb36c8a",
     "oferta": 2000,
-    "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Trabalhar em conjunto com a equipe para definir os requisitos funcionais e não funcionais do IA Core, Elaborar um documento de requisitos detalhado, identificando as funcionalidades essenciais, as métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
+    "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Trabalhar em conjunto com a equipe para definir os requisitos funcionais e não funcionais do IA Core, Elaborar um documento de requisitos detalhado, identificando as funcionalidades essenciais, as métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
     "duracao_estimada": 6,
     "codprojetocargo": "352223rf-adff-asdf-34td-sdfg4w5gsdfg",
     "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",  
@@ -568,7 +567,7 @@ Exemplo:
   {
     "codproposta": "shdhv836-vra8-j68i-dfy7-lghj5d6s4fsr",
     "oferta": 1500,
-    "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: As métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
+    "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: As métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
     "duracao_estimada": 2,
     "codprojetocargo": "352223rf-adff-asdf-34td-sdfg4w5gsdfg",
     "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",  
@@ -595,7 +594,7 @@ Response:
 
 ```javascript
 {
-    "proposta": []object || null
+  "proposta": []object || null
 }
 ```
 
@@ -606,7 +605,7 @@ Exemplo:
   {
     "codproposta": "e6dxgq73-vba8-rebn-ans8-anxy8sb36c8a",
     "oferta": 2000,
-    "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Trabalhar em conjunto com a equipe para definir os requisitos funcionais e não funcionais do IA Core, Elaborar um documento de requisitos detalhado, identificando as funcionalidades essenciais, as métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
+    "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Trabalhar em conjunto com a equipe para definir os requisitos funcionais e não funcionais do IA Core, Elaborar um documento de requisitos detalhado, identificando as funcionalidades essenciais, as métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
     "duracao_estimada": 6,
     "codprojetocargo": "352223rf-adff-asdf-34td-sdfg4w5gsdfg",
     "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",  
@@ -617,7 +616,7 @@ Exemplo:
   {
     "codproposta": "shdhv836-vra8-j68i-dfy7-lghj5d6s4fsr",
     "oferta": 1500,
-    "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: As métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
+    "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: As métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
     "duracao_estimada": 2,
     "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000",
     "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",  
@@ -644,7 +643,7 @@ Response:
 
 ```javascript
 {
-    "proposta": []object || null
+  "proposta": []object || null
 }
 ```
 
@@ -655,9 +654,10 @@ Exemplo:
   {
     "codproposta": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
     "oferta": 1700,
-    "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Análise e Definição de Requisitos, Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
+    "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Análise e Definição de Requisitos, Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
     "duracao_estimada": 12,
-    "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000", 
+    "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000",
+    "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",   
     "nome": "Rafael", 
     "email": "rafael@gmail.com", 
     "telefone": "+55 (12) 92212-5311", 
@@ -678,9 +678,10 @@ Request body:
 ```javascript
 {
   "oferta": number,
-  "descrição": string,
+  "descricao": string,
   "duracao_estimada": number,
   "codprojetocargo": string, 
+  "codprojeto": string,
   "nome": string, 
   "email": string, 
   "telefone": string, 
@@ -691,9 +692,9 @@ Response:
 
 ```javascript
 {
-    "codproposta": string || null,
-    "status": true || false,
-    "message": string
+  "codproposta": string || null,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -703,9 +704,10 @@ Exemplo:
 {
   "codproposta": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
   "oferta": 1700,
-  "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Análise e Definição de Requisitos, Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
+  "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Análise e Definição de Requisitos, Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
   "duracao_estimada": 12,
-  "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000", 
+  "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000",
+  "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",   
   "nome": "Rafael", 
   "email": "rafael@gmail.com", 
   "telefone": "+55 (12) 92212-5311", 
@@ -715,8 +717,8 @@ Exemplo:
 ```javascript
 {
   "codproposta": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",
-    "status": true || false,
-    "message": string
+  "status": true,
+  "message": "Registro Inserido"
 }
 ```
 
@@ -737,9 +739,10 @@ Request body:
 ```javascript
 {
   "oferta": number,
-  "descrição": string,
+  "descricao": string,
   "duracao_estimada": number,
-  "projeto_cargo_id": string, 
+  "codprojetocargo": string, 
+  "codprojeto": string,
   "nome": string, 
   "email": string, 
   "telefone": string, 
@@ -750,9 +753,9 @@ Response:
 
 ```javascript
 {
-    "codproposta": string || error,
-    "status": true || false,
-    "message": string
+  "codproposta": string || error,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -762,9 +765,10 @@ Exemplo:
 {
   "codproposta": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
   "oferta": 1700,
-  "descrição": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
+  "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Arquitetura e Design, Implementar os componentes do IA Core utilizando linguagens de programação como Python, C++ ou Java e Garantir a qualidade do código através de testes unitários e de integração.",
   "duracao_estimada": 12,
-  "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000", 
+  "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000",
+  "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",    
   "nome": "Rafael", 
   "email": "rafael@gmail.com", 
   "telefone": "+55 (12) 92212-5311", 
@@ -773,9 +777,9 @@ Exemplo:
 
 ```javascript
 {
-  "codproposta": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",
-    "status": true || false,
-    "message": string
+  "codproposta": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
+  "status": true,
+  "message": "Registro Atualizado"
 }
 ```
 
@@ -795,9 +799,9 @@ Response:
 
 ```javascript
 {
-    "codproposta": string || error,
-    "status": true || false,
-    "message": string
+  "codproposta": string || error,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -806,8 +810,8 @@ Exemplo:
 ```javascript
 {
   "codproposta": "e6dxgq73-vba8-rebn-ans8-anxy8sb36c8a",
-    "status": true || false,
-    "message": string
+  "status": true,
+  "message": "Registro Excluído"
 }
 ```
 
@@ -825,7 +829,7 @@ Response:
 
 ```javascript
 {
-    "cargo": []object || null
+  "cargo": []object || null
 }
 ```
 
@@ -858,7 +862,7 @@ Response:
 
 ```javascript
 {
-    "cargo": []object || null
+  "cargo": []object || null
 }
 ```
 
@@ -893,9 +897,9 @@ Response:
 
 ```javascript
 {
-    "codcargo": string || null,
-    "status": true || false,
-    "message": string
+  "codcargo": string || null,
+  "status": true || false,
+  "message": string
 }
 ```
 
@@ -903,7 +907,7 @@ Exemplo:
 
 ```javascript
 {
-  "codcargo": "Desenvolvedor"
+  "cargo_nome": "Desenvolvedor"
 }
 ```
 
@@ -989,7 +993,7 @@ Exemplo:
 {
   "codcargo": "erfj9sj4-sdk4-s3g6-dgy6-4rgdsw3a7j1s",
   "status": true,
-  "message": "Registro Atualizado"
+  "message": "Registro Excluído"
 }
 ```
 

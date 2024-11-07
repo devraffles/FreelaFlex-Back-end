@@ -13,7 +13,7 @@ CREATE TABLE projeto(
 CREATE TABLE proposta(
 	codproposta uuid DEFAULT gen_random_uuid() PRIMARY KEY,
 	oferta VARCHAR(50) NOT NULL,
-	descricao VARCHAR(150) NOT NULL,
+	descricao VARCHAR(500) NOT NULL,
 	duracao_estimada DECIMAL NOT NULL,
 	nome VARCHAR(50) NOT NULL,
 	email VARCHAR(50) NOT NULL,

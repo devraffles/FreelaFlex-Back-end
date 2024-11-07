@@ -8,5 +8,9 @@ export default async function listProjetoServices(nome) {
         ORDER BY nome
     `
 
+    if(projeto.length === 0){
+        return res.status(404)
+    }
+
     return projeto;
 }
