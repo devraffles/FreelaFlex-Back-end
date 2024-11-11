@@ -1,4 +1,5 @@
 import sql from "../../db/sql.js";
+import MyError from "../../error/myError.js";
 
 export default async function listCargoServices(nome) {
 
@@ -9,7 +10,7 @@ export default async function listCargoServices(nome) {
     `
 
     if(cargo.length === 0){
-        return res.status(404)
+        throw new MyError("Não foi possivel encontrar o registro", 404);
     }
 
     return cargo;

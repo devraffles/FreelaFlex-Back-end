@@ -1,9 +1,10 @@
 import sql from "../../db/sql.js";
+import MyError from "../../error/myError.js";
 
 export default async function registraProjetoServices(nome, descricao, habilidades) {
 
     if(!nome || !descricao || !habilidades){
-        return res.status(400)
+        throw new MyError("Preencha todos os campos", 400);
     }
 
     const projetoCargo = await sql`

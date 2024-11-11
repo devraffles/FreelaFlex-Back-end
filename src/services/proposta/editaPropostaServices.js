@@ -1,4 +1,5 @@
 import sql from "../../db/sql.js";
+import MyError from "../../error/myError.js";
 
 export default async function editaPropostaServices(
     oferta, 
@@ -13,11 +14,11 @@ export default async function editaPropostaServices(
 ) {
 
     if(!oferta || !descricao || !duracao_estimada || !codprojetocargo || !codprojeto || !nome || !email || !telefone){
-        return res.status(400)
+        throw new MyError("preencha todos os campos", 400);
     }
     
     if(!codProposta){
-        return res.status(401)
+        throw new MyError("Registro não encontrado", 401);
     }
 
     const proposta = await sql`

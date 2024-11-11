@@ -1,13 +1,14 @@
 import sql from "../../db/sql.js";
+import MyError from "../../error/myError.js";
 
 export default async function editaCargoProjetoServices(codcargo, codprojeto, codProjetoCargo) {
 
     if(!codcargo || !codprojeto){
-        return res.status(400)
+        throw new MyError("preencha todos os campos", 400);
     }
     
     if(!codProjetoCargo){
-        return res.status(401)
+        throw new MyError("Registro não encontrado", 401);
     }
 
     const projetoCargo = await sql`

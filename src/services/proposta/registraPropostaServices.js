@@ -1,9 +1,10 @@
 import sql from "../../db/sql.js";
+import MyError from "../../error/myError.js";
 
 export default async function registraPropostaServices(oferta, descricao, duracao_estimada, codprojetocargo, codprojeto, nome, email, telefone) {
 
     if(!oferta || !descricao || !duracao_estimada || !codprojetocargo || !codprojeto || !nome || !email || !telefone){
-        return res.status(400)
+        throw new MyError("Preencha todos os campos", 400);
     }
 
     const proposta = await sql`
