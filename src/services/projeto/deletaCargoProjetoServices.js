@@ -1,14 +1,14 @@
 import sql from "../../db/sql.js";
 import MyError from "../../error/myError.js";
 
-export default async function deletaCargoProjetoServices(codProjetoCargo) {
+export default async function deletaCargoProjetoServices(codProjeto) {
 
-    if(!codProjetoCargo){
-        throw new MyError("Registro não encontrado", 401);
+    if(!codProjeto){
+        throw new MyError("Registro não encontrado", 404);
     }
 
     const projetoCargo = await sql`
-        DELETE FROM projeto_cargo WHERE codprojetocargo = ${codProjetoCargo} returning codprojetocargo;
+        DELETE FROM projeto_cargo WHERE codprojeto = ${codProjeto} returning codprojeto;
     `
 
     return projetoCargo;

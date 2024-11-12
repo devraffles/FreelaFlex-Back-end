@@ -4,7 +4,7 @@ import MyError from "../../error/myError.js";
 export default async function deletaCargoServices(codCargo) {
 
     if(!codCargo){
-        throw new MyError("Registro não encontrado", 401);
+        throw new MyError("Registro não encontrado", 404);
     }
 
     const cargo = await sql`

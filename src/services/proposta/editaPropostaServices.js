@@ -18,7 +18,7 @@ export default async function editaPropostaServices(
     }
     
     if(!codProposta){
-        throw new MyError("Registro não encontrado", 401);
+        throw new MyError("Registro não encontrado", 404);
     }
 
     const proposta = await sql`

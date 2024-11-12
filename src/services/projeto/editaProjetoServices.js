@@ -8,7 +8,7 @@ export default async function editaProjetoServices(nome, descricao, habilidades,
     }
     
     if(!codProjeto){
-        throw new MyError("Registro não encontrado", 401);
+        throw new MyError("Registro não encontrado", 404);
     }
 
     const projetoCargo = await sql`

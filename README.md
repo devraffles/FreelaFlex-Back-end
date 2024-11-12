@@ -102,6 +102,7 @@ Os status de respostas possíveis para esta API são:
 | 200 | `OK` |
 | 400 | `BAD REQUEST (REQUISIÇÃO FALHOU)`|
 | 404 | `NOT FOUND (NÃO ENCONTRADO)` |
+| 422 | `UNPROCESSABLE ENTITY (ENTIDADE NÃO PROCESSADA)`|
 | 500 | `INTERNAL SERVER ERROR (ERRO DO SERVIDOR INTERNO)` |
 
 #
@@ -281,7 +282,10 @@ Request body:
 {
   "nome": string,
   "descricao": string,
-  "habilidades": string
+  "habilidades": string,
+  "cargos": [
+    string
+  ]
 }
 ```
 
@@ -302,6 +306,9 @@ Exemplo:
   "nome": "IA Core",
   "descricao": "O IA Core poderia ser a unidade central de processamento de um sistema de IA, responsável pelas decisões mais complexas e pela coordenação de outros componentes.",
   "habilidades": "Algoritmos, estruturas de dados, aprendizado de máquina, redes neurais, Cálculo, álgebra linear, estatística, Conhecimento profundo sobre a área de aplicação da IA (ex: saúde, finanças, etc.)."
+  "cargos": [
+   "erfj9sj4-sdk4-s3g6-dgy6-4rgdsw3a7j1s"
+  ]
 }
 ```
 
@@ -376,7 +383,10 @@ Request body:
 {
   "nome": string,
   "descricao": string,
-  "habilidades": string
+  "habilidades": string,
+  "cargos": [
+    string
+  ]
 }
 ```
 
@@ -396,7 +406,10 @@ Exemplo:
 {
   "nome": "IA Core",
   "descricao": "O IA Core será a unidade central de processamento de um sistema de IA, responsável pelas decisões mais complexas e pela coordenação de outros componentes.",
-  "habilidades": "Algoritmos, estruturas de dados, aprendizado de máquina, redes neurais, Cálculo, álgebra linear, estatística, Conhecimento profundo sobre a área de aplicação da IA (ex: saúde, finanças, etc.)."
+  "habilidades": "Algoritmos, estruturas de dados, aprendizado de máquina, redes neurais, Cálculo, álgebra linear, estatística, Conhecimento profundo sobre a área de aplicação da IA (ex: saúde, finanças, etc.).",
+  "cargos": [
+   "erfj9sj4-sdk4-s3g6-dgy6-4rgdsw3a7j1s"
+  ]
 }
 ```
 
@@ -504,7 +517,7 @@ Response:
 
 ```javascript
 {
-  "codprojetocargo": string || error,
+  "codprojeto": string || error,
   "status": true || false,
   "message": string
 }
@@ -514,7 +527,7 @@ Exemplo:
 
 ```javascript
 {
-  "codprojetocargo": "kllz02ls-9hjw-aib3-phgq-l9gk3fmaç20c",
+  "codprojeto": "kllz02ls-9hjw-aib3-phgq-l9gk3fmaç20c",
   "status": true,
   "message": "Registro Excluído"
 }

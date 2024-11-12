@@ -2,12 +2,12 @@ import deletaCargoProjetoServices from "../../services/projeto/deletaCargoProjet
 
 export default async function deletaCargoProjetoController(req, res) {
 
-    const codProjetoCargo = req.query.codProjetoCargo
+    const codProjeto = req.query.codProjeto
 
-    const projetoCargo = await deletaCargoProjetoServices(codProjetoCargo);
+    const projetoCargo = await deletaCargoProjetoServices(codProjeto);
 
     res.status(200).json({
-        codprojetocargo: projetoCargo[0].codprojetocargo,
+        codprojeto: projetoCargo[0].codprojeto,
         status: true,
         message: "Registro Excluído"
     })

@@ -8,7 +8,7 @@ export default async function editaCargoServices(cargo_nome, codCargo) {
     }
     
     if(!codCargo){
-        throw new MyError("Registro não encontrado", 401);
+        throw new MyError("Registro não encontrado", 404);
     }
 
     const cargo = await sql`
