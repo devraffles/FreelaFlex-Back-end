@@ -801,12 +801,12 @@ Exemplo:
 #### Deletar uma proposta
 
 ```http
-DELETE /proposta/delete?codProposta=${codproposta}
+DELETE /proposta/delete?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `codproposta` | `string` | **Required**. Código do proposta a ser removido |
+| `codprojeto` | `string` | **Required**. Código do projeto para saber qual proposta a ser removido |
 
 Response:
 

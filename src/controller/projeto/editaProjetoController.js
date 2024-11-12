@@ -1,6 +1,5 @@
 import deletaCargoProjetoServices from "../../services/projeto/deletaCargoProjetoServices.js";
 import editaProjetoServices from "../../services/projeto/editaProjetoServices.js";
-import MyError from "../../error/myError.js";
 
 export default async function editaProjetoController(req, res) {
 
