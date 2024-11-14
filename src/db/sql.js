@@ -1,6 +1,6 @@
 import postgres from "postgres";
 
-const PGURL = `postgresql://${process.env.PGUSER}:${process.env.PGPASSWORD}@${process.env.PGHOST}:${process.env.ENDPOINT}/${process.env.PGDATABASE}`;
+const PGURL = `${process.env.DBURLPG}`;
 
 const sql = postgres({
     PGURL
