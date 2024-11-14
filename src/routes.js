@@ -44,26 +44,26 @@ router.get('/ping', (req, res) => {
 });
 
 //Cargo
-router.get('/cargo/list', listCargoController);
-router.post('/cargo/registro', registraCargoController);
-router.put('/cargo/edit', editaCargoController);
-router.delete('/cargo/delete', deletaCargoController);
+router.get('/cargo', listCargoController);
+router.post('/cargo', registraCargoController);
+router.put('/cargo', editaCargoController);
+router.delete('/cargo', deletaCargoController);
 
 //Projeto
-router.get('/projeto/list', listProjetoController);
-router.get('/projeto/list/cargo', listCargoProjetoController);
-router.post('/projeto/registro', registraProjetoController);
-router.post('/projeto/cargo/registro', registraCargoProjetoController);
-router.put('/projeto/edit', editaProjetoController);
-router.put('/projeto/cargo/edit', editaCargoProjetoController);
-router.delete('/projeto/delete', deletaProjetoController);
-router.delete('/projeto/cargo/delete', deletaCargoProjetoController);
+router.get('/projeto', listProjetoController);
+router.get('/projeto/cargo', listCargoProjetoController);
+router.post('/projeto', registraProjetoController);
+router.post('/projeto/cargo', registraCargoProjetoController);
+router.put('/projeto', editaProjetoController);
+router.put('/projeto/cargo', editaCargoProjetoController);
+router.delete('/projeto', deletaProjetoController);
+router.delete('/projeto/cargo', deletaCargoProjetoController);
 
 //Proposta
-router.get('/proposta/list', listPropostaController);
-router.get('/proposta/list/projeto', listPropostaProjetoController);
-router.post('/proposta/registro', registraPropostaController);
-router.put('/proposta/edit', editaPropostaController);
-router.delete('/proposta/delete', deletaPropostaController);
+router.get('/proposta', listPropostaController);
+router.get('/proposta/projeto', listPropostaProjetoController);
+router.post('/proposta', registraPropostaController);
+router.put('/proposta', editaPropostaController);
+router.delete('/proposta', deletaPropostaController);
 
 export default router

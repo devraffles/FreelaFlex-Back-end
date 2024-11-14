@@ -168,7 +168,7 @@ Em caso de erro retornará somente o `error`
 #### Listar todos os projetos
 
 ```http
-GET /projeto/list
+GET /projeto
 ```
 
 Response:
@@ -203,7 +203,7 @@ Exemplo:
 #### Listar todos os cargos do projeto
 
 ```http
-GET /projeto/list/cargo?codProjeto=${codprojeto}
+GET /projeto/cargo?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
@@ -240,7 +240,7 @@ Exemplo:
 #### Ver um único projeto
 
 ```http
-GET /projeto/list?nomeProjeto=${nome}
+GET /projeto?nomeProjeto=${nome}
 ```
 
 | Parameter | Type     | Description                       |
@@ -273,7 +273,7 @@ Exemplo:
 #### Registrar um projeto
 
 ```http
-POST /projeto/registro
+POST /projeto
 ```
 
 Request body:
@@ -325,7 +325,7 @@ Exemplo:
 #### Registrar um cargo no projeto
 
 ```http
-POST /projeto/cargo/registro
+POST /projeto/cargo
 ```
 
 Request body:
@@ -370,7 +370,7 @@ Exemplo:
 #### Editar um projeto
 
 ```http
-PUT /projeto/edit?codProjeto=${codprojeto}
+PUT /projeto?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
@@ -426,7 +426,7 @@ Exemplo:
 #### Editar um cargo do projeto
 
 ```http
-PUT /projeto/cargo/edit?codProjetoCargo=${codprojeto}
+PUT /projeto/cargo?codProjetoCargo=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
@@ -474,7 +474,7 @@ Exemplo:
 #### Deletar um projeto
 
 ```http
-DELETE /projeto/delete?codProjetoCargo=${codprojeto}
+DELETE /projeto?codProjetoCargo=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
@@ -506,7 +506,7 @@ Exemplo:
 #### Deletar um cargo do projeto
 
 ```http
-DELETE /projeto/cargo/delete?codProjeto=${codprojeto}
+DELETE /projeto/cargo?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
@@ -540,7 +540,7 @@ Exemplo:
 #### Listar todas as propostas
 
 ```http
-GET /proposta/list
+GET /proposta
 ```
 
 Response:
@@ -596,7 +596,7 @@ Exemplo:
 #### Listar todos as propostas do projeto
 
 ```http
-GET /proposta/list/projeto?codProjeto=${codprojeto}
+GET /proposta/projeto?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
@@ -645,7 +645,7 @@ Exemplo:
 #### Ver uma única proposta
 
 ```http
-GET /proposta/list?codProposta=${codproposta}
+GET /proposta?codProposta=${codproposta}
 ```
 
 | Parameter | Type     | Description                       |
@@ -683,7 +683,7 @@ Exemplo:
 #### Registrar uma proposta
 
 ```http
-POST /proposta/registro
+POST /proposta
 ```
 
 Request body:
@@ -740,7 +740,7 @@ Exemplo:
 #### Editar uma proposta
 
 ```http
-PUT /proposta/edit?codProposta=${codproposta}
+PUT /proposta?codProposta=${codproposta}
 ```
 
 | Parameter | Type     | Description                       |
@@ -801,7 +801,7 @@ Exemplo:
 #### Deletar uma proposta
 
 ```http
-DELETE /proposta/delete?codProposta=${codproposta}
+DELETE /proposta?codProposta=${codproposta}
 ```
 
 | Parameter | Type     | Description                       |
@@ -835,7 +835,7 @@ Exemplo:
 #### Listar todos os cargo
 
 ```http
-GET /cargo/list
+GET /cargo
 ```
 
 Response:
@@ -864,7 +864,7 @@ Exemplo:
 #### Ver um único cargo
 
 ```http
-GET /cargo/list?nomeCargo=${cargo_nome}
+GET /cargo?nomeCargo=${cargo_nome}
 ```
 
 | Parameter | Type     | Description                       |
@@ -895,7 +895,7 @@ Exemplo:
 #### Registrar um Cargo
 
 ```http
-POST /cargo/registro
+POST /cargo
 ```
 
 Request body:
@@ -937,7 +937,7 @@ Exemplo:
 #### Editar um cargo
 
 ```http
-PUT /cargo/edit?codCargo=${codcargo}
+PUT /cargo?codCargo=${codcargo}
 ```
 
 | Parameter | Type     | Description                       |
@@ -983,7 +983,7 @@ Exemplo:
 #### Deletar um cargo
 
 ```http
-DELETE /cargo/delete?codCargo=${codcargo}
+DELETE /cargo?codCargo=${codcargo}
 ```
 
 | Parameter | Type     | Description                       |
