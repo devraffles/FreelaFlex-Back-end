@@ -370,17 +370,14 @@ Exemplo:
 #### Editar um projeto
 
 ```http
-PUT /projeto?codProjeto=${codprojeto}
+PUT /projeto
 ```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `codprojeto` | `string` | **Required**. Código do projeto a ser editado |
 
 Request body:
 
 ```javascript
 {
+  "codprojeto": string
   "nome": string,
   "descricao": string,
   "habilidades": string,
@@ -389,6 +386,10 @@ Request body:
   ]
 }
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `codprojeto` | `string` | **Required**. Código do projeto a ser editado |
 
 Response:
 
@@ -404,6 +405,7 @@ Exemplo:
 
 ```javascript
 {
+  "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v"
   "nome": "IA Core",
   "descricao": "O IA Core será a unidade central de processamento de um sistema de IA, responsável pelas decisões mais complexas e pela coordenação de outros componentes.",
   "habilidades": "Algoritmos, estruturas de dados, aprendizado de máquina, redes neurais, Cálculo, álgebra linear, estatística, Conhecimento profundo sobre a área de aplicação da IA (ex: saúde, finanças, etc.).",
@@ -426,21 +428,22 @@ Exemplo:
 #### Editar um cargo do projeto
 
 ```http
-PUT /projeto/cargo?codProjetoCargo=${codprojeto}
+PUT /projeto/cargo
 ```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `codprojeto` | `string` | **Required**. Código do cargo do projeto a ser editado |
 
 Request body:
 
 ```javascript
 {
+  "codprojetocargo": string,
   "codcargo": string,
   "codprojeto": string,
 }
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `codprojeto` | `string` | **Required**. Código do cargo do projeto a ser editado |
 
 Response:
 
@@ -740,17 +743,14 @@ Exemplo:
 #### Editar uma proposta
 
 ```http
-PUT /proposta?codProposta=${codproposta}
+PUT /proposta
 ```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `codproposta` | `string` | **Required**. Código do proposta a ser editado |
 
 Request body:
 
 ```javascript
 {
+  "codproposta": string,
   "oferta": number,
   "descricao": string,
   "duracao_estimada": number,
@@ -761,6 +761,10 @@ Request body:
   "telefone": string, 
 }
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `codproposta` | `string` | **Required**. Código do proposta a ser editado |
 
 Response:
 
@@ -937,20 +941,21 @@ Exemplo:
 #### Editar um cargo
 
 ```http
-PUT /cargo?codCargo=${codcargo}
+PUT /cargo
 ```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `codcargo` | `string` | **Required**. Código do cargo a ser editado |
 
 Request body:
 
 ```javascript
 {
-  "cargo_nome": string,
+  "codcargo": string,
+  "cargo_nome": string
 }
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `codcargo` | `string` | **Required**. Código do cargo a ser editado |
 
 Response:
 

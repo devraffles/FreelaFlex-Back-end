@@ -2,8 +2,7 @@ import editaPropostaServices from "../../services/proposta/editaPropostaServices
 
 export default async function editaPropostaController(req, res) {
 
-    const { oferta, descricao, duracao_estimada, codprojetocargo, codprojeto, nome, email, telefone } = req.body
-    const codProposta = req.query.codProposta
+    const { codproposta, oferta, descricao, duracao_estimada, codprojetocargo, codprojeto, nome, email, telefone } = req.body
 
     const proposta = await editaPropostaServices(
         oferta, 
@@ -14,7 +13,7 @@ export default async function editaPropostaController(req, res) {
         nome, 
         email, 
         telefone, 
-        codProposta
+        codproposta
     );
 
     res.status(200).json({

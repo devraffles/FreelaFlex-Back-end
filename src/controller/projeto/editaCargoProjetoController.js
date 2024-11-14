@@ -2,10 +2,9 @@ import editaCargoProjetoServices from "../../services/projeto/editaCargoProjetoS
 
 export default async function editaCargoProjetoController(req, res) {
 
-    const { codcargo, codprojeto } = req.body
-    const codProjetoCargo = req.query.codProjetoCargo
+    const { codprojetocargo, codcargo, codprojeto } = req.body
 
-    const projetoCargo = await editaCargoProjetoServices(codcargo, codprojeto, codProjetoCargo);
+    const projetoCargo = await editaCargoProjetoServices(codcargo, codprojeto, codprojetocargo);
 
     res.status(200).json({
         codprojetocargo: projetoCargo[0].codprojetocargo,

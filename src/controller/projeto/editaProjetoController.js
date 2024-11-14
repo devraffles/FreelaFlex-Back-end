@@ -3,17 +3,16 @@ import editaProjetoServices from "../../services/projeto/editaProjetoServices.js
 
 export default async function editaProjetoController(req, res) {
 
-    const { nome, descricao, habilidades, cargos } = req.body
-    const codProjeto = req.query.codProjeto
+    const { codprojeto, nome, descricao, habilidades, cargos } = req.body
 
     const projeto = new Promise ((resolve, reject) => {
 
-        editaProjetoServices(nome, descricao, habilidades, codProjeto)
+        editaProjetoServices(codprojeto, nome, descricao, habilidades, )
 
     }).then((sucess) => {
-        deletaCargoProjetoServices(codProjeto).then((sucess) => {
+        deletaCargoProjetoServices(codprojeto).then((sucess) => {
             cargos.forEach(cargo => {
-                registraCargoProjetoServices(cargo, codProjeto)
+                registraCargoProjetoServices(cargo, codprojeto)
             });
 
             res.status(200).json({
