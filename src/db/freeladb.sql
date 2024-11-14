@@ -1,3 +1,5 @@
+CREATE DATABASE freelaflex
+
 CREATE TABLE cargo(
 	codcargo uuid DEFAULT gen_random_uuid() PRIMARY KEY,
 	cargo_nome VARCHAR(50) NOT NULL
