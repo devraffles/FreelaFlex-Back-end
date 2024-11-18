@@ -27,5 +27,5 @@ app.use((error, req, res, next) => {
 })
 
 app.listen(process.env.PORTA_SERVER, () => {
-    console.log("Servidor OK em: http://freelaflexbackend.vercel.app")
+    console.log("Servidor OK em: http://localhost:" + process.env.PORTA_SERVER)
 });
