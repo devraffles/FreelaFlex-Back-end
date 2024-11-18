@@ -11,7 +11,7 @@ A FreelaFlex oferece uma experiência personalizada e eficiente para todos os en
 
 #
 
-API hospedada em: Ainda não possui hospedagem
+API hospedada em: freelaflexbackend.vercel.app
 
 ## Como rodar o Back End
 
