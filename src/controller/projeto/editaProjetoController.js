@@ -7,7 +7,7 @@ export default async function editaProjetoController(req, res) {
 
     const projeto = new Promise ((resolve, reject) => {
 
-        editaProjetoServices(codprojeto, nome, descricao, habilidades, )
+        editaProjetoServices(codprojeto, nome, descricao, habilidades)
 
     }).then((sucess) => {
         deletaCargoProjetoServices(codprojeto).then((sucess) => {
