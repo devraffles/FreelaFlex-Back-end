@@ -6,7 +6,7 @@ export default async function listCargoProjetoServices(codProjeto) {
     const projeto = await sql`
         SELECT 
             pc.*,
-            c.cargo_nome as "nomeCargo"
+            c.cargo_nome as "nomecargo"
         FROM 
             projeto_cargo as pc
             INNER JOIN cargo as c ON (c.codcargo = pc.codcargo)
