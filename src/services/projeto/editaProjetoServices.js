@@ -2,7 +2,6 @@ import sql from "../../db/sql.js";
 import MyError from "../../error/myError.js";
 
 export default async function editaProjetoServices(codProjeto, nome, descricao, habilidades) {
-
     if(!nome || !descricao || !habilidades){
         throw new MyError("preencha todos os campos", 400);
     }
