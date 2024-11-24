@@ -477,7 +477,7 @@ Exemplo:
 #### Deletar um projeto
 
 ```http
-DELETE /projeto?codProjetoCargo=${codprojeto}
+DELETE /projeto?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
