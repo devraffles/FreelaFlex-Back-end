@@ -1,5 +1,6 @@
 import deletaCargoProjetoServices from "../../services/projeto/deletaCargoProjetoServices.js";
 import editaProjetoServices from "../../services/projeto/editaProjetoServices.js";
+import registraCargoProjetoServices from "../../services/projeto/registraCargoProjetoServices.js"
 
 export default async function editaProjetoController(req, res) {
     const { codprojeto, nome, descricao, habilidades, cargos } = req.body
