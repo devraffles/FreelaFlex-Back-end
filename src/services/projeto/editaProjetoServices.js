@@ -10,9 +10,9 @@ export default async function editaProjetoServices(codProjeto, nome, descricao, 
         throw new MyError("Registro não encontrado", 404);
     }
 
-    const projetoCargo = await sql`
+    const projeto = await sql`
         UPDATE projeto SET nome = ${nome}, descricao = ${descricao}, habilidades = ${habilidades} WHERE codprojeto = ${codProjeto} returning codprojeto;
     `
 
-    return projetoCargo;
+    return projeto;
 }
