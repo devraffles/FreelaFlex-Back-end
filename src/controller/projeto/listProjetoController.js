@@ -2,9 +2,9 @@ import listProjetoServices from "../../services/projeto/listProjetoServices.js";
 
 export default async function listProjetoController(req, res) {
 
-    const nomeProjeto = req.query.nomeProjeto
+    const codProjeto = req.query.codProjeto
 
-    const projeto = await listProjetoServices(nomeProjeto);
+    const projeto = await listProjetoServices(codProjeto);
 
     res.status(200).json(projeto)
 }

@@ -1,11 +1,11 @@
 import sql from "../../db/sql.js";
 import MyError from "../../error/myError.js";
 
-export default async function listProjetoServices(nome) {
+export default async function listProjetoServices(codProjeto) {
 
     const projeto = await sql`
         SELECT * FROM projeto 
-        ${ nome ? sql`WHERE nome LIKE ${nome}` : sql`` }
+        ${ codProjeto ? sql`WHERE codprojeto = ${codProjeto}` : sql`` }
         ORDER BY nome
     `
 
