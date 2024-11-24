@@ -226,12 +226,14 @@ Exemplo:
     "codprojetocargo": "dff34gs7-ajd8-h56e-sdt5-sdfgw45tdrg5",
     "codcargo": "hjhb7rjd-jf76-ke73-gew4-jdf7fhw8fi09",
     "codprojeto": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
+    "nomecargo": "Desenvolvedor de Software"
   },
   {
     "codprojetocargo": "ghd8sj36-jfv7-5g4r-d9uj-jfj8edrugjs8",
     "codcargo": "gbh8d8s9-8uja-8fua-kb89-9eurfjv8wef7",
     "codprojeto": "ed72js9a-9g72-ajkx-13kd-isa8d3hs9sj4",
-  },
+    "nomecargo": "Designer de Produtos Digitais"
+  }
 ]
 ```
 
