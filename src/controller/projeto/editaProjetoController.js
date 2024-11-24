@@ -13,14 +13,7 @@ export default async function editaProjetoController(req, res) {
         });
     }
 
-    const deletaCargo = await deletaCargoProjetoServices(codprojeto);
-
-    if(deletaCargo.length === 0){
-        res.status(422).json({
-            status: false,
-            message: "Erro ao excluir cargos do projeto"
-        });
-    }
+    await deletaCargoProjetoServices(codprojeto);
 
     cargos.forEach(cargo => {
         registraCargoProjetoServices(cargo, codprojeto)
