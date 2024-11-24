@@ -4,7 +4,12 @@ import MyError from "../../error/myError.js";
 export default async function listCargoProjetoServices(codProjeto) {
 
     const projeto = await sql`
-        SELECT * FROM projeto_cargo 
+        SELECT 
+            pc.*,
+            c.cargo_nome as 'nomeCargo' 
+        FROM 
+            projeto_cargo as pc
+            INNER JOIN cargo as c ON (c.codcargo = pc.codcargo)
         ${ codProjeto ? sql`WHERE codprojeto = ${codProjeto}` : sql`` }
     `
 
