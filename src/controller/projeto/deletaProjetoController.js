@@ -1,13 +1,13 @@
 import deletaProjetoServices from "../../services/projeto/deletaProjetoServices.js";
 import deletaCargoProjetoServices from "../../services/projeto/deletaCargoProjetoServices.js"
-import deletaPropostaServices from "../../services/proposta/deletaPropostaServices.js";
+import deletaPropostaProjetoServices from "../../services/proposta/deletaPropostaProjetoServices.js";
 
 export default async function deletaProjetoController(req, res) {
 
     const codProjeto = req.query.codProjeto
 
     const projeto = new Promise ((resolve, reject) => {
-        deletaPropostaServices(codProjeto).then(() => {
+        deletaPropostaProjetoServices(codProjeto).then(() => {
             deletaCargoProjetoServices(codProjeto).then(() => {
                     deletaProjetoServices(codProjeto).then(() => {
                         res.status(200).json({
