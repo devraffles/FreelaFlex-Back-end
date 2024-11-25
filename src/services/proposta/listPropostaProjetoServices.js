@@ -8,8 +8,15 @@ export default async function listPropostaProjetoServices(codProjeto) {
     }
 
     const proposta = await sql`
-        SELECT * FROM proposta 
-        WHERE codprojeto = ${codProjeto}
+        SELECT 
+            pp.*,
+            c.cargo_nome as "nomecargo"
+        FROM 
+            proposta as pp
+            INNER JOIN projeto_cargo as pc ON (pp.codprojetocargo = pc.codprojetocargo)
+            INNER JOIN cargo as c ON (c.codcargo = pc.codcargo)
+        WHERE 
+            pp.codprojeto = ${codProjeto}
     `
 
     if(proposta.length === 0){
