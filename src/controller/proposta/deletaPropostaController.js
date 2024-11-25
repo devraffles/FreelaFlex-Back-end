@@ -2,10 +2,10 @@ import deletaPropostaServices from "../../services/proposta/deletaPropostaServic
 
 export default async function deletaPropostaController(req, res) {
 
-    const codProposta = req.query.codProposta
+    const codProjeto = req.query.codProposta
 
     const proposta = await deletaPropostaServices(
-        codProposta
+        codProjeto
     );
 
     res.status(200).json({

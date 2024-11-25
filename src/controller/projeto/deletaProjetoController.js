@@ -7,7 +7,7 @@ export default async function deletaProjetoController(req, res) {
     const codProjeto = req.query.codProjeto
 
     const projeto = new Promise ((resolve, reject) => {
-        deletaPropostaServices("", codProjeto).then(() => {
+        deletaPropostaServices(codProjeto).then(() => {
             deletaCargoProjetoServices(codProjeto).then(() => {
                     deletaProjetoServices(codProjeto).then(() => {
                         res.status(200).json({
