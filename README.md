@@ -626,6 +626,7 @@ Exemplo:
     "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: Trabalhar em conjunto com a equipe para definir os requisitos funcionais e não funcionais do IA Core, Elaborar um documento de requisitos detalhado, identificando as funcionalidades essenciais, as métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
     "duracao_estimada": 6,
     "codprojetocargo": "352223rf-adff-asdf-34td-sdfg4w5gsdfg",
+    "nomecargo": "Desenvolvedor de Software",
     "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",  
     "nome": "Luca", 
     "email": "luca@gmail.com", 
@@ -637,6 +638,7 @@ Exemplo:
     "descricao": "Como freelancer especializado em inteligência artificial, ofereço as seguintes contribuições para o projeto IA Core: As métricas de desempenho e as integrações necessárias, Desenvolver a arquitetura do sistema, escolhendo as tecnologias e ferramentas mais adequadas para cada componente e Criar diagramas e fluxogramas para visualizar a lógica do sistema e facilitar a comunicação com a equipe.",
     "duracao_estimada": 2,
     "codprojetocargo": "9a4fcd71-cb10-4e01-983a-d155264a4000",
+    "nomecargo": "Arquiteto",
     "codprojeto": "7fgd78y3-a6rj-kc89-a7sh-zjd8we4hj47v",  
     "nome": "Julio", 
     "email": "julio@gmail.com", 
@@ -807,12 +809,12 @@ Exemplo:
 #### Deletar uma proposta
 
 ```http
-DELETE /proposta?codProposta=${codproposta}
+DELETE /proposta?codProjeto=${codprojeto}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `codproposta` | `string` | **Required**. Código do proposta a ser removido |
+| `codprojeto` | `string` | **Required**. Código do projeto para deletar proposta a ser removido |
 
 Response:
 
